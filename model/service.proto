@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package model;
+
+message Service {
+	string Name = 1;
+	repeated string Annotation = 2;
+	repeated Section Section = 3;
+	repeated string DataStructure = 4;
+}
+
+message Section {
+	repeated string Annotation = 1;
+	repeated Method Method = 2;
+}
+
+message Method {
+	repeated string Annotation = 1;
+	repeated string ErrorCode = 2;
+	string MethodName = 3;
+	string ReqName = 4;
+	string RespName = 5;
+}
